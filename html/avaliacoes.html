@@ -1,69 +1,36 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrossel de Imagens com CSS</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="shortcut icon" href="/img/ATANI LOGO.png">
+    <link rel="stylesheet" href="/SITE-ATANI/css/style.css">
+    <title>Átani Quejos</title>
 </head>
 <body>
     <header>
         <nav>
-            <ul>
-                <li><a href="#">Início</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Serviços</a></li>
-                <li><a href="#">Contato</a></li>
-            </ul>
+            <a href="/SITE-ATANI/html/index.html">
+                <img src="/SITE-ATANI/img/Logo atani.png" alt="LOGO ÁTANI" class="imagem-padrao">
+            </a>
+          <div class="mobile-menu">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div>
+          <ul class="nav-list">
+                <li><a href="/SITE-ATANI/html/index.html">Início</a></li>
+                <li><a href="/SITE-ATANI/html/historia.html">História</a></li>
+                <li><a href="/SITE-ATANI/html/produtos.html">Produtos</a></li>
+                <li><a href="/SITE-ATANI/html/avaliacoes.html">Avaliações</a></li>
+                <li><a href="/SITE-ATANI/html/parceiros.html">Parceiros</a></li>
+                <li><a href="/SITE-ATANI/html/eventos.html">Eventos</a></li>
+                <li><a href="/SITE-ATANI/html/premiacoes.html">Premiações</a></li>
+          </ul>
         </nav>
-    </header>
-
-    <main>
-        <section class="carousel">
-            <input type="radio" name="carousel" id="item-1" checked>
-            <input type="radio" name="carousel" id="item-2">
-            <input type="radio" name="carousel" id="item-3">
-            
-            <div class="carousel-items">
-                <div class="carousel-item">
-                    <img src="https://via.placeholder.com/800x400?text=Imagem+1" alt="Imagem 1">
-                </div>
-                <div class="carousel-item">
-                    <img src="https://via.placeholder.com/800x400?text=Imagem+2" alt="Imagem 2">
-                </div>
-                <div class="carousel-item">
-                    <img src="https://via.placeholder.com/800x400?text=Imagem+3" alt="Imagem 3">
-                </div>
-            </div>
-
-            <div class="carousel-nav">
-                <label for="item-1" class="nav-dot"></label>
-                <label for="item-2" class="nav-dot"></label>
-                <label for="item-3" class="nav-dot"></label>
-            </div>
-        </section>
-
-        <section class="grid">
-            <article class="grid-item">
-                <a href="#">Item 1</a>
-            </article>
-            <article class="grid-item">
-                <a href="#">Item 2</a>
-            </article>
-            <article class="grid-item">
-                <a href="#">Item 3</a>
-            </article>
-            <article class="grid-item">
-                <a href="#">Item 4</a>
-            </article>
-            <article class="grid-item">
-                <a href="#">Item 5</a>
-            </article>
-            <article class="grid-item">
-                <a href="#">Item 6</a>
-            </article>
-        </section>
-    </main>
+      </header>
+    
+    <script src="/SITE-ATANI/js/script.js"></script>
 </body>
 </html>
+
