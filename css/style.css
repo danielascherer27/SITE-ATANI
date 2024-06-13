@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700; 1.900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    background-color: #163352;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+    display: inline-block; /* Garante que o link não ocupe o espaço de um bloco completo */
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+.logo {
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between; /* Distribui o espaço entre os elementos */
+    align-items: center; /* Centraliza verticalmente */
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    background: #163352;
+    height: 10vh;
+    padding: 0 20px; /* Adiciona um padding lateral para espaçamento */
+    position: relative; /* Permite o posicionamento absoluto do mobile-menu */
+}
+
+.nav-container {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    flex: 1; /* Permite que o contêiner de navegação ocupe o espaço restante */
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Centraliza os itens dentro da lista */
+    flex: 1; /* Permite que a lista ocupe o espaço disponível */
+}
+
+.nav-list li {
+    letter-spacing: 1px;
+    margin: 0 15px; /* Ajuste o espaçamento entre os itens do menu conforme necessário */
+}
+
+.logo-container {
+    flex: 0 0 auto; /* Garante que a logo não cresça */
+}
+
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+    position: absolute; /* Permite o posicionamento relativo ao nav */
+    right: 20px; /* Ajuste conforme necessário */
+}
+
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transition: 0.3s;
+}
+
+@media (max-width: 999px) {
+    body {
+        overflow-x: hidden;
+    }
+    .nav-list {
+        position: absolute;
+        top: 8vh;
+        right: 0;
+        width: 50vw;
+        height: 92vh;
+        background: #163352;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+    .nav-list li {
+        margin-left: 0;
+        opacity: 0;
+    }
+    .mobile-menu {
+        display: block;
+    }
+}
+
+.nav-list.active {
+    transform: translateX(0);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+    opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+}
+
+/* Definição de tamanho padrão para imagens */
+img {
+    width: 100%;  /* Adapte conforme necessário */
+    max-width: 200px;  /* Defina o valor máximo de largura */
+    height: auto;  /* Mantém a proporção da imagem */
+    display: block;  /* Remove espaços brancos ao redor da imagem */
+    margin: 0 auto;  /* Centraliza a imagem */
+}
+
+/* Se quiser aplicar a regra apenas a algumas imagens, use uma classe */
+.imagem-padrao {
+    width: 100%;  /* Adapte conforme necessário */
+    max-width: 200px;  /* Defina o valor máximo de largura */
+    height: auto;  /* Mantém a proporção da imagem */
+    display: block;  /* Remove espaços brancos ao redor da imagem */
+    margin: 0 auto;  /* Centraliza a imagem */
+}
